@@ -1,0 +1,10 @@
+Package: com.kramerapps.jetsamctl
+Name: jetsamctl
+Depends: firmware (>= 6.0)
+Version: 0.1
+Architecture: iphoneos-arm
+Description: Modify Jetsam constraints
+Maintainer: Conrad Kramer
+Author: Conrad Kramer <conrad@kramerapps.com>
+Section: System
+Tag: role::hacker
