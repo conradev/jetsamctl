@@ -26,7 +26,7 @@ int main(int argc, const char * argv[]) {
     };
 
     int ch;
-    char *prioritystr, *limitstr;
+    char *prioritystr = NULL, *limitstr = NULL;
     while ((ch = getopt_long(argc, (char * const *)argv, "l:p:", opts, NULL)) != -1) {
         switch (ch) {
             case 'l':
@@ -70,7 +70,7 @@ int main(int argc, const char * argv[]) {
             return 1;
         }
 
-        for (int i = 0; i < size / sizeof(struct kinfo_proc); i++) {
+        for (unsigned long i = 0; i < size / sizeof(struct kinfo_proc); i++) {
             if (strcmp(processes[i].kp_proc.p_comm, process) == 0) {
                 pid = processes[i].kp_proc.p_pid;
                 break;

@@ -4,6 +4,7 @@ TARGET = iphone:clang:latest:6.0
 include theos/makefiles/common.mk
 
 TOOL_NAME = jetsamctl
+jetsamctl_CFLAGS = -Wall -Wpedantic -Wextra
 jetsamctl_FILES = main.c
 
 include $(THEOS_MAKE_PATH)/tool.mk
